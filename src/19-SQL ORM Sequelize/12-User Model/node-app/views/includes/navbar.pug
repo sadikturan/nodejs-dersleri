@@ -1,0 +1,29 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+    .container
+        a(href="/").navbar-brand Shopping
+        ul.navbar-nav.mr-auto
+
+            li.nav-item
+                a(href="/", class=(path === '/'?'nav-link active':'nav-link')) Home
+
+            li.nav-item
+                a(href="/products", class=(path === '/products'?'nav-link active':'nav-link')) Products  
+
+            li.nav-item
+                a(href="/cart", class=(path === '/cart'?'nav-link active':'nav-link')) Cart  
+
+            li.nav-item
+                a(href="/orders", class=(path === '/orders'?'nav-link active':'nav-link')) Orders       
+                    
+            li.nav-item
+                a(href="/admin/add-product", class=(path==='/admin/add-product'?'nav-link active':'nav-link')) Add Product 
+
+            li.nav-item
+                a(href="/admin/products", class=(path==='/admin/products'?'nav-link active':'nav-link')) Admin Products
+
+        ul.navbar-nav.ml-auto
+            li.nav-item
+                a.nav-link(href="") Login
+                    
+            li.nav-item
+                a.nav-link(href="") Register    

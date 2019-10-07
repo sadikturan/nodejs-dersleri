@@ -1,0 +1,50 @@
+extends layouts/main-layout.pug
+
+block content
+        #mySlider.carousel.slide(data-ride="carousel")
+
+            ol.carousel-indicators
+                li(data-target="#mySlider" data-slide-to="0").active
+                li(data-target="#mySlider" data-slide-to="1")
+                li(data-target="#mySlider" data-slide-to="2")
+        
+            .carousel-inner
+                .carousel-item.active
+                    img(src="/img/slider1.png" alt="").d-block.img-fluid
+            
+                .carousel-item
+                    img(src="/img/slider2.png" alt="").d-block.img-fluid
+                
+                .carousel-item
+                    img(src="/img/slider3.png" alt="").d-block.img-fluid
+
+        
+            a(href="#mySlider"  data-slide="prev").carousel-control-prev
+                span.carousel-control-prev-icon
+            
+            a(href="#mySlider"  data-slide="next").carousel-control-next
+            span.carousel-control-next-icon
+
+    
+
+        .row
+            each product in products
+                .col-md-4
+
+                    .card.my-3
+                        img(src=`/img/${product.image}` alt=`${product.description}`).card-img-top
+                        .card-body
+                            h4.card-title
+                                a(href="#") #{product.name}
+                            
+                            p.card-text.pt-2 #{product.description}  
+                        
+                        .card-footer
+                            small.text-muted
+                                i.fas.fa-lira-sign #{product.price}
+
+                            a(href="#").btn.btn-secondary.btn-sm.float-right
+                                i.fa.fa-angle-double-right Details 
+
+                    
+

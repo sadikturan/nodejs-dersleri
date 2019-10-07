@@ -1,0 +1,27 @@
+extends ../layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet" href="/css/forms.css")
+
+block content
+    if errorMessage
+        div.alert.alert-danger.col-sm-7 !{errorMessage}
+    form(action="/login" method="POST")
+        input(type="hidden" name="_csrf" value=`${csrfToken}`)
+        .form-group.row
+            label(for="email").col-sm-1.col-form-label Email
+            .col-sm-5.pr-0
+                input.form-control#name(type="text" name="email")   
+
+        .form-group.row
+            label(for="password").col-sm-1.col-form-label Password
+            .col-sm-5.pr-0
+                input.form-control#password(type="password" name="password")  
+                
+        .form-group.row
+            .col-sm-5.offset-sm-1
+                input(type="submit" value="Submit").btn.btn-primary   
+
+        .form-group.row
+            .col-sm-5.offset-sm-1
+                a(href="/reset-password").btn.btn-link.p-0 Reset Password 

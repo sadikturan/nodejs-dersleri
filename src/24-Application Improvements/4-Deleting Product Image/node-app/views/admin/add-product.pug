@@ -1,0 +1,44 @@
+extends ../layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet" href="/css/forms.css")
+
+block content
+
+    if errorMessage
+        div.alert.alert-danger.col-sm-7 !{errorMessage}
+
+    form(action="/admin/add-product" method="POST" enctype="multipart/form-data")
+        input(type="hidden" name="_csrf" value=`${csrfToken}`)
+        .form-group.row
+            label(for="name").col-sm-2.col-form-label Product Name
+            .col-sm-10
+                input.form-control#name(type="text" name="name" value=`${inputs.name}`)  
+
+        .form-group.row
+            label(for="price").col-sm-2.col-form-label Price
+            .col-sm-10
+                input.form-control#price(type="text" name="price" value=`${inputs.price}`) 
+
+        .form-group.row
+            label(for="imageUrl").col-sm-2.col-form-label Image
+            .col-sm-10
+                input.form-control-file#image(type="file" name="image") 
+
+        //- .form-group.row
+        //-     label(for="categoryid").col-sm-2.col-form-label Category
+        //-     .col-sm-10
+        //-         select.form-control#categoryid(name="categoryid")
+        //-             option(value="-1") Select Category
+        //-             each category in categories
+        //-                 option(value=`${category.id}`) #{category.name}
+
+        .form-group.row
+            label(for="description").col-sm-2.col-form-label Description
+            .col-sm-10
+                textarea.form-control(name="description" cols="30" rows="10") #{inputs.description}
+                
+        .form-group.row
+            .col-sm-10.offset-sm-2
+                input(type="submit" value="Save Product").btn.btn-primary   
+           

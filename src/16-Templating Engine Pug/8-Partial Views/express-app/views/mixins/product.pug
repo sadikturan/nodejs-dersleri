@@ -1,0 +1,16 @@
+mixin product(product)
+    .col-md-4
+        .card.my-3
+            img(src=`/img/${product.image}` alt=`${product.description}`).card-img-top
+            .card-body
+                h4.card-title
+                a(href="#") #{product.name}
+                                
+                p.card-text.pt-2 #{product.description}  
+                            
+            .card-footer
+                small.text-muted
+                    i.fas.fa-lira-sign #{product.price}
+
+                a(href="#").btn.btn-secondary.btn-sm.float-right
+                    i.fa.fa-angle-double-right Details 

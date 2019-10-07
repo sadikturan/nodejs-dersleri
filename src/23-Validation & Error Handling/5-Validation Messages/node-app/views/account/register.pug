@@ -1,0 +1,29 @@
+extends ../layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet" href="/css/forms.css")
+
+block content
+    if errorMessage
+        div.alert.alert-danger.col-sm-7 #{errorMessage}
+    form(action="/register" method="POST")
+        input(type="hidden" name="_csrf" value=`${csrfToken}`)
+        .form-group.row
+            label(for="name").col-sm-2.col-form-label Name
+            .col-sm-5
+                input.form-control#name(type="text" name="name")  
+
+        .form-group.row
+            label(for="email").col-sm-2.col-form-label Email
+            .col-sm-5
+                input.form-control#email(type="text" name="email")    
+
+        .form-group.row
+            label(for="password").col-sm-2.col-form-label Password
+            .col-sm-5
+                input.form-control#password(type="password" name="password")  
+                
+        .form-group.row
+            .col-sm-5.offset-sm-2
+                input(type="submit" value="Submit").btn.btn-primary   
+           

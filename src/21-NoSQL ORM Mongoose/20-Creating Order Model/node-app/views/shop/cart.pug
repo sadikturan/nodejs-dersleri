@@ -1,0 +1,45 @@
+extends ../layouts/main-layout.pug
+
+block content 
+    if (action !== 'undefined' && action === 'delete')
+        div.alert.alert-danger The product has been deleted.
+
+    if (action !== 'undefined' && action === 'edit')
+        div.alert.alert-success The product has been updated.
+    
+    if products.length > 0
+        table.table.table-bordered
+            thead
+                tr
+                    th(style="width:100px;") Image
+                    th Product Name
+                    th(style="width:150px;") Price
+                    th Quantity
+                    th(style="width:133px;")
+            tbody
+                each product in products
+                    tr
+                        td
+                            img(src=`/img/${product.productId.imageUrl}` width='80')
+                        td #{product.productId.name}
+                        td #{product.productId.price} TL
+                        td #{product.quantity}
+                        td 
+                            form(action='/delete-cartitem' method='POST')
+                                input(type='hidden' name='productid' value=`${product.productId._id}`)
+                                button(type='submit').btn.btn-danger.btn-sm Delete
+
+            tfoot
+                td(colspan="4")
+
+                    - var total = 0;
+                    each product in products
+                        - total += (product.productId.price * product.quantity)
+                td  #{total} TL
+
+        .text-center
+            a(href="/").btn.btn-primary Alışverişe Devam Et
+            form(action="/create-order" method="POST")
+                button(type="submit").btn.btn-primary.ml-2 Alışverişi Tamamla
+    else
+        h1 No Products                        

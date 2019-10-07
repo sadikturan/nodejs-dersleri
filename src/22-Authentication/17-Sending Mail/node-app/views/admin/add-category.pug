@@ -1,0 +1,22 @@
+extends ../layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet" href="/css/forms.css")
+
+block content
+    form(action="/admin/add-category" method="POST")
+        input(type="hidden" name="_csrf" value=`${csrfToken}`)
+        .form-group.row
+            label(for="name").col-sm-2.col-form-label Name
+            .col-sm-10
+                input.form-control#name(type="text" name="name")    
+
+        .form-group.row
+            label(for="description").col-sm-2.col-form-label Description
+            .col-sm-10
+                textarea.form-control(name="description" cols="30" rows="10") 
+                
+        .form-group.row
+            .col-sm-10.offset-sm-2
+                input(type="submit" value="Save Category").btn.btn-primary   
+           

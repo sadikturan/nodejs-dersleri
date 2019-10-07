@@ -1,0 +1,25 @@
+<!doctype html>
+html(lang="en")
+
+    include ../includes/head
+
+    body
+
+        include ../includes/navbar          
+
+        .container.pt-100
+            .row
+                .col-lg-3
+                    .list-group
+                        a(href="").list-group-item Category 1
+                        a(href="").list-group-item Category 2
+                        a(href="").list-group-item Category 3
+                   
+                .col-lg-9
+
+                    block content
+           
+
+            script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js") 
+            script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js") 

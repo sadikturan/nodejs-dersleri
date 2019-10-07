@@ -1,0 +1,38 @@
+extends ../layouts/main-layout.pug
+
+block content   
+
+    if orders.length > 0 
+        each order in orders
+            .card.mb-5
+                .card-header
+                    h3 order id: ##{order.id}
+                table.table
+                    thead
+                        tr
+                            th Image
+                            th Product Name
+                            th Price
+                            th Quantity
+                    tbody
+                        each product in order.products
+                            tr
+                                td
+                                    img(src=`/img/${product.imageUrl}` width="80")
+                                td #{product.name}
+                                td #{product.orderItem.quantity}
+                                td #{product.orderItem.price}
+                    tfoot
+                        tr
+                            td(colspan="2") #{order.createdAt.toDateString()}
+                            td
+                            - var total = 0;
+                            each product in order.products
+                                - total += (product.price * product.orderItem.quantity)
+                            td  #{total} TL
+
+                
+
+
+    else
+        h1 No Orders

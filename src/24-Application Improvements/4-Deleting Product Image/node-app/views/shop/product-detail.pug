@@ -1,0 +1,24 @@
+extends ../layouts/main-layout.pug
+
+block content   
+
+    .row
+        .col-md-3
+            img(src=`/img/${product.imageUrl}` alt=`${product.description}`).img-fluid
+
+        .col-md-9.pl-3
+            h1.mb-3 #{product.name}
+            hr
+            a(href="").btn.btn-link.p-0.mb-3 Telefon
+            .mb-3
+                h4.text-primary.mb-3 #{product.price} TL
+                button(type="submit").btn.btn-primary.btn-lg Add to Cart
+
+    .row
+        .col-md-12
+            hr
+            p.p-3 #{product.description}
+            
+           
+            
+                    
