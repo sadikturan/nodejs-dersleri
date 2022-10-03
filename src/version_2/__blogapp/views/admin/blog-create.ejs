@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head")  %> 
+</head>
+<body>
+    
+    <%- include("../partials/nav")  %> 
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <% if (typeof message != "undefined") { %>
+                    <div class="alert alert-<%= message.class %>">
+                        <%= message.text %> 
+                    </div>
+                <% } %>
+
+                <form method="post" enctype="multipart/form-data" action="/admin/blog/create?_csrf=<%= csrfToken %>">
+                    <div class="row mb-3">
+                        <label for="baslik" class="col-sm-2 col-form-label">Başlık</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="baslik" name="baslik" value="<%= (typeof values !== "undefined") ? values.baslik: "" %>">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="altbaslik" class="col-sm-2 col-form-label">altbaslik</label>
+                        <div class="col-sm-8">
+                            <textarea name="altbaslik" class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="aciklama" class="col-sm-2 col-form-label">Açıklama</label>
+                        <div class="col-sm-8">
+                            <textarea id="editor" name="aciklama" class="form-control" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="resim" class="col-sm-2 col-form-label">Resim</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" id="resim" name="resim">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-8 offset-sm-2">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="anasayfa" name="anasayfa">
+                            <label class="form-check-label" for="anasayfa">
+                                Anasayfa
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-8 offset-sm-2">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="onay" name="onay">
+                            <label class="form-check-label" for="onay">
+                                Onay
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-8 offset-sm-2">
+                          <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+       
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+</body>
+</html>
+
+
+

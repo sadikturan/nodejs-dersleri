@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head")  %> 
+</head>
+<body>
+    
+    <%- include("../partials/nav")  %> 
+
+    <div class="container mt-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/static/images/<%=blog.resim  %>" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h1 class="h3 mb-3"> <%= blog.baslik %> </h1>
+                        <p><%= blog.altbaslik %> </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><%- blog.aciklama %> </p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
+
+
+

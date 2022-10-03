@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head")  %> 
+</head>
+<body>
+    
+    <%- include("../partials/nav")  %> 
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <%- include("../partials/category-menu", { categories, selectedCategory } )  %> 
+            </div>
+            <div class="col-md-9">
+                <h1 class="h3 mb-3"> <%= title %> </h1>
+
+                <% if (blogs.length == 0) { %>
+                    <%- include("../partials/no-products")  %>
+                <% } %>
+
+                <% blogs.forEach(blog => { %>
+                    <%- include("../partials/blog-card", blog)  %> 
+                <% }) %>
+
+                
+                <%- include("../partials/pagination")  %>                 
+             
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+

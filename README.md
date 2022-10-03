@@ -1,55 +1,41 @@
-# Nodejs Kursu: Baştan Sona FullStack Web Geliştirme
+# Node.js ile Sıfırdan İleri Seviye Web Geliştirme
 
-**Nodejs Kursu: Baştan Sona FullStack Web Geliştirme Eğitimi kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/komple-web-gelistirme-kursu-nodejs/?referralCode=11FD99AE510C32F9F77F "tıklayınız.")**
+**Node.js ile Sıfırdan İleri Seviye Web Geliştirme Eğitimi kursumuzu incelemek için [tıklayınız.](https://www.udemy.com/course/komple-web-gelistirme-kursu-nodejs/?referralCode=11FD99AE510C32F9F77F "tıklayınız.")**
 
-Yayınlandığı ilk günden beri **Udemy'nin en iyi 3 kursu** içerisinde en yüksek değerlendirme oranına sahip olduğumuzu bilmenizi isterim.
+En popüler programlama dili olan Javascript programlama dilini artık Node.js sayesinde server tabanlı bir dil olarak kullanabilirsin.
 
-Kursumuzun frontend bölümünde **html5, css,bootstrap 4, javascript** ve **backend kısmı ise tercihe bağlı olarak asp.net mvc ve nodejs** olarak hazırlanmıştır. İncelediğiniz kursun backend bölümünde nodejs anlatılmaktadır.
+Kurs sonunda sadece Javascript programlama dilini kullanarak Fullstack bir web geliştirici olmak istiyorsan hemen kursa katılmalısın!
 
-**Kursumuz sıfırdan ileri seviyeye** kadar bir web geliştiricinin bilmesi gereken tüm konuların yer aldığı, piyasadaki en kapsamlı ve en güncel kurs olduğunu bilmenizi isterim.
+Üstelik 30 gün iade garantisiyle!
 
-Peki neden Web Geliştirici Kursuna İhtiyaç Duyalım ;
+Kursumuz piyasadaki en popüler ve en güncel Node.js kursudur.
+
+Javascript tartışmasız günümüzdeki en popüler programlama dilidir çünkü her web uygulaması mutlaka Javascript içerir.
+
+Eğer temel düzeyde Javascript biliyorsan artık mevcut Javascript programlama bilginle Node.js öğrenip kolaylıkla dinamik web uygulaması geliştirmeye başlayabilirsin.
+
+Neden Node.js Öğrenmeliyim ?
 
 Ciddi iş potansiyeline sahip olan bu alanda kendinizi geliştirip iyi bir kariyer sahibi olabilirsiniz.
+Freelancer olarak çalışıp kendi müşterilerinize hizmet sunabilirsiniz.
+Kurumsal bir firmada iyi bir ücret karşılığında çalışabilirsiniz.
+Hayal ettiğiniz projeleri gerçekleştirme fırsatına sahip olabilirsiniz.
+Node.js kursumuza katılmak için temel düzeyde Javascript programlama bilgisi ve temel düzelde HTML/CSS bilgisine sahip olmanız yeterlidir. Kursumuz sıfırdan ileri seviyeye tüm Node.js konularını içeriyor ve her konu en temelden detaylı bir şekilde anlatılıyor. Ayrıca her bölümde öğrendiklerimizi uygulayabileceğimiz gerçek bir projeyi sıfırdan ileri seviyeye adım adım geliştiriyoruz.
 
-**Freelancer olarak çalışıp** kendi müşterilerinize hizmet sunabilirsiniz.
+Kurs Planımız;
 
-Kurumsal bir firmada **iyi bir ücret karşılığında** çalışabilirsiniz.
-
-Hayal ettiğiniz **projeleri gerçekleştirme fırsatına** sahip olabilirsiniz.
-
-Kurs programı web geliştirici alanıyla uğraşmaya başlamış ancak neyi ne zaman öğrenmesi gerektiğini bilmeyen ya da bu alanla ilgili hiç bir fikri olmayan kişileri göz önüne alarak sıfırdan özenle hazırlanmıştır.
-
-Web geliştirici olmak aslına bakarsak zor değil ancak kaynak sıkıntısı gerçekten çoğu zaman sıkıntı oluyor ve aslında kolay olan bu süreci gerçekten çok zormuş gibi gösteriyor.
-
-Kaynak sıkıntısı ; aslında neyi öğrenmemiz gerektiği , öğrenme sürecinde birbirinin eşdeğeri konular ya da yazılım araçlarının neler olduğu , en son çıkan teknolojiler neler gibi konuların bilinmediği üzerinedir. Bu gibi sıkıntılar öğrenme sürecini uzatıp çoğu zamanda bu işten vazgeçilmesine neden olmaktadır.
-
-Bize sınırsız bilgi sunan İnternet ile kaynağa ulaşma sürecimiz çok çabuk ve kolay olmaktadır ancak bu başta güzel gözükse de binlerce kaynak içinden neyi öğrenmemiz gerektiğini seçmek gerçekten zor oluyor.Dolayısıyla çoğu zaman birbirine eşdeğer çoğu yazılım türleri ya da araçlarıyla boşu boşuna aylarca uğraşıyoruz.
-
-Web geliştirici olmak için gereken konuları öğrendik ancak sitemizi nasıl yayınlayacağız ? 
-
-Satın almanız gereken hosting paketi nasıl olmalı ? 
-
-Hangi özelliklere sahip olmalı ? 
-
-Dosyalarımı nasıl internet ortamında yayınlarım ? 
-
-Bu nedenden dolayı kursumuza kayıt olan her kişi geliştirdiği web sitelerini yayınlamak için gereken Web Hosting paketine 1 yıl boyunca ücretsiz olarak sahip olacaktır. Üstelik sitenizi nasıl yayınlayacağınız adım adım anlatılmaktadır, bu işlem gerçekten çok basit.
-
-Kurs Sonunda ;
-
-Her türlü web tasarım sitelerini
-
-Her sektöre hitap eden statik ve dinamik tanıtım sitelerini
-
-Blog tarzındaki dinamik içerik üreten web sitelerini
-
-Sitelerinizin yönetim panelini
-
-En temel kuralları içeren bir E-ticaret sitesini
-
-yapabiliyor olacaksınız.
-
-Üstelik takıldığınız her hangi bir konuda bana anında ulaşıp benden yardım talebinde bulunabilirsiniz. Sorularınızı mümkün olan en kısa sürede cevaplayacağımdan emin olabilirsiniz.
-
-Zaman kaybetmeden bu kursa dahil olup bir web geliştiricinin bilmesi gereken en güncel ve en temel konuları planlı bir şekilde öğrenin...!
+Node.js Geliştirme Ortamının Hazırlanması
+Node.js Temelleri
+Node Package Manager - Npm
+Express.js
+Template Engines - EJS
+Model - View - Controller - MVC
+SQL
+SQL ORM - Sequalize
+NoSQL ORM - MongoDb
+Mongoose ORM
+Authentication
+Validations
+Blog App
+Node.js RESTFull API
+Node.js Publish

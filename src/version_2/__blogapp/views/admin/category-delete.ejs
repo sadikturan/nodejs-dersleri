@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head")  %> 
+</head>
+<body>
+    
+    <%- include("../partials/nav")  %> 
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 mt-3 text-center">
+               <div class="alert alert-secondary">
+                <p class="mb-3">
+                    <b><%= category.name %> </b> <br> isimli category kaydınız silmek istiyor musunuz?
+                </p>
+                <form method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <input type="hidden" name="categoryid" value="<%= category.id %>">
+                    <button class="btn btn-danger" type="submit">Evet</button>
+                    <a href="/admin/categories" class="btn btn-primary">Vazgeç</a>
+                </form>
+               </div>
+            </div>
+        </div>
+    </div>
+       
+</body>
+</html>
+
+
+

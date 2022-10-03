@@ -1,0 +1,66 @@
+<nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+    <div class="container">
+        <a href="/" class="navbar-brand">Blogapp</a>
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a href="/blogs" class="nav-link">Blog Listesi</a>
+            </li>
+
+            <% if (isAdmin || isModerator) { %>            
+                
+                <li class="nav-item">
+                    <a href="/admin/blogs" class="nav-link">Admin Blogs </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/blog/create" class="nav-link">Add Blog </a>
+                </li>
+
+            <% } %>
+
+            <% if (isAdmin) { %>
+             
+                <li class="nav-item">
+                    <a href="/admin/categories" class="nav-link">Admin Categories </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/category/create" class="nav-link">Add Category </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/roles" class="nav-link">Roles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/users" class="nav-link">Users</a>
+                </li>
+                
+            <% } %>
+
+           
+
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+
+            <% if (isAuth) { %>   
+                <li class="nav-item">
+                    <a href="/account/index" class="nav-link"><%= fullname %> </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/account/logout" class="nav-link">Logout</a>
+                </li>
+            <% } else { %>
+                <li class="nav-item">
+                    <a href="/account/login" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/account/register" class="nav-link">Register</a>
+                </li>
+            <% } %>               
+            
+
+        </ul>
+
+
+
+
+    </div>
+</nav>
